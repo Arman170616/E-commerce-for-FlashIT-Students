@@ -1,9 +1,9 @@
 from django.urls import path
-from store.views import home
+from store.views import HomeListView
 
 
 urlpatterns = [
-    path('', home, name='index'),
+    path('', HomeListView.as_view(), name='index'),
 
 
 ]
