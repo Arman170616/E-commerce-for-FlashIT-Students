@@ -11,3 +11,20 @@ class HomeListView(ListView):
    model = Product
    template_name = 'store/index.html'
    context_object_name = 'products'
+
+
+
+
+class ProductDetailView(DetailView):
+    model = Product
+    template_name = 'store/product.html'
+    context_object_name = 'item'
+
+
+#fucltion based view pk is primary key
+# def product_detail(request, pk):
+#     item = Product.objects.get(id=pk)
+#     context = {
+#         'item': item
+#     }
+#     return render(request, 'store/product.html', context)
