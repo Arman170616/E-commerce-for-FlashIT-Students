@@ -1,9 +1,14 @@
 from django.contrib import admin
 
-from .models import Category, Product
+from .models import Category, Product, ProductImages
 
+
+
+class ProductImagesAdmin(admin.StackedInline):
+    model = ProductImages
 
 class ProductAdmin(admin.ModelAdmin):
+    inlines = [ProductImagesAdmin]
     prepopulated_fields = {'slug': ('name',)}
 
 
