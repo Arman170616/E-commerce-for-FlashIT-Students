@@ -33,7 +33,7 @@
                                 <div class="product-gallery product-gallery-vertical">
                                     <div class="row">
                                         <figure class="product-main-image">
-                                            <img id="product-zoom" src="{{item.image.url}}" data-zoom-image="assets/images/products/single/1-big.jpg" alt="product image">
+                                            <img id="product-zoom" src="{{item.image.url}}" data-zoom-image="{{item.image.url}}" alt="product image">
 
                                             <a href="#" id="btn-product-gallery" class="btn-product-gallery">
                                                 <i class="icon-arrows"></i>
@@ -73,7 +73,7 @@
                                     {% endif %}
 
                                     <div class="product-content">
-                                        <p>{{item.description}} </p>
+                                        <p>{{item.preview_des}} </p>
                                     </div><!-- End .product-content -->
 
                                     <div class="details-filter-row details-row-size">
@@ -123,9 +123,7 @@
                                     <div class="product-details-footer">
                                         <div class="product-cat">
                                             <span>Category:</span>
-                                            <a href="#">Women</a>,
-                                            <a href="#">Dresses</a>,
-                                            <a href="#">Yellow</a>
+                                            <a href="#">{{item.category}}</a>,
                                         </div><!-- End .product-cat -->
 
                                         <div class="social-icons social-icons-sm">
