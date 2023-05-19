@@ -29,6 +29,9 @@ class Order(models.Model):
     updated = models.DateTimeField(auto_now=True)
     paymentId = models.CharField(max_length=255, blank=True, null=True)
     orderId = models.CharField(max_length=255, blank=True, null=True)
+
+    def __str__(self):
+        return self.user.username
     
     
     def get_total(self):
